@@ -11,7 +11,7 @@ var gameHeight = gameCanvas.height = window.innerHeight;
 
 var popImage = document.getElementById('popImage');
 
-// Initial step
+// Starting step
 var pg = 0;
 var totalPg = 100;
 
@@ -41,7 +41,7 @@ var updatePgBar = () => {
 
         // Loading screen Image
         const backgroundImage = new Image();
-        backgroundImage.src = './img/bg.jpg';
+        backgroundImage.src = './img/bg5.jpg';
         backgroundImage.onload = function () {
             // Draw the background image on the canvas
             ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
@@ -51,7 +51,6 @@ var updatePgBar = () => {
         image.src = './img/cloud.png';
         var x = 0;
         var y = 0;
-
 
         function animate() {
             ctx.drawImage(backgroundImage, 0, 0, canvas.width, canvas.height);
@@ -70,8 +69,8 @@ var updatePgBar = () => {
 
         };
         animate();
-        var backgroundSound = document.getElementById('backgroundSound')
-        backgroundSound.play();
+        var backgroundAudio = document.getElementById('backgroundAudio')
+        backgroundAudio.play();
     };
 };
 
@@ -95,7 +94,7 @@ function startGame() {
 startGame();
 
 var image = new Image();
-image.src = "./img/bg.jpg";
+image.src = "./img/bg5.jpg";
 image.onload = function () {
     ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
 };
@@ -188,10 +187,8 @@ canvas.addEventListener("click", function (event) {
 
         // Load the background image
         const backgroundImage = new Image();
-        backgroundImage.src = './img/bg.jpg';
-        backgroundImage.onload = function () {
-            // Start the game loop after the image has loaded
-            // gameLoop();
+        backgroundImage.src = './img/bg5.jpg';
+        backgroundImage.onload = function () {            
         };
         //New
 
